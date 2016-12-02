@@ -37,7 +37,7 @@ var db = mongoose.connection;
 autoIncrement.initialize(db);
 
 var Schema = mongoose.Schema;
-mongoose.set('debug', config.get('mongo.debug'));
+mongoose.set('debug', false);
 /**
  * user schema stores the user data the password is hashed
  * @type {Schema}

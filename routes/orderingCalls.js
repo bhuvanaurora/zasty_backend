@@ -118,6 +118,8 @@ router.post('/lt/order',
 		req.body.customer_number = order.customer_details.mobile;
 		req.body.payment_mode = order.payment_mode;
 
+		console.log(req.body);
+
         orderLogic.checkCode(req)
             .then(function(){
                 return orderLogic.getcoupon(req, req.body.coupon)
