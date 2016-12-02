@@ -531,6 +531,7 @@ var orderLogic = {
     checkCode:function(req){
         var def=q.defer();
         userTable.findOne({email:req.body.customer_email},"pin",function(err,user){
+			console.log(user);
            if(!err&&user){
                log.info(user,req.body);
                if(user.pin==req.body.code){

@@ -119,10 +119,7 @@ router.post('/lt/order',
 
 		console.log(req.body);
 
-        orderLogic.checkCode(req)
-            .then(function(){
-                return orderLogic.getcoupon(req, req.body.coupon)
-            })
+        orderLogic.getcoupon(req, req.body.coupon)
             .then(function (code) {
                 req.body.coupon_code = code;
                 return orderLogic.findRestaurantFromArea(req);
