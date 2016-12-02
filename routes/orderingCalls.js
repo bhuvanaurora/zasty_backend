@@ -112,7 +112,7 @@ router.post('/lt/order',
 		req.body.area = order.customer_details.address.location_name;
 		req.body.locality = order.customer_details.address.locality_name;
 		req.body.address = order.customer_details.address.address;
-		req.body.dishes_ordered = order.items;
+		req.body.dishes_ordered = order.cart.items;
 		req.body.customer_name = order.customer_details.name;
 		req.body.customer_number = order.customer_details.mobile;
 		req.body.payment_mode = order.payment_mode;
